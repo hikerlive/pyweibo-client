@@ -1,0 +1,16 @@
+﻿演示功能：
+
+weibo.py是为网页提供的包装类，
+a.path的映射，诸如html内容的映射，所调用的函数映射等。
+b.如网页数据请求映射（符合Http协议的post函数级调用），返回数据。
+
+1.演示从Python模块中获取数据。
+2.演示从c扩展模块中获取数据。
+
+如何打包呢？
+1.write a setup.py file, just like 'demo\setup.py' file.
+2.python setup.py py2exe。
+
+依赖说明：
+1.sharesprite项目工程的运行时库。
+2.qt4.8的运行时库。

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>新浪微博</title>
+<script type="text/javascript" src="onering://onering/onering.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/demo.css"></style>
+</head>
+<body>
+    <article>
+        <ul>
+            <li><a href="/apitest">接口测试</a></li>
+            <li><a href="/sinaweibo_template">内容模板</a></li>
+            <li><a href="/sinaweibo_demo">微博模板</a></li>
+            <li><a href="/sinaweibodemo">Mock版新浪微博</a>
+            <li><a href="/sinaweibodemo2">新浪微博</a>
+        </ul>
+    </article>
+    <footer id="demo_footer">
+        <a href="javascript:ONERING.getCurrentWindow().showInspector()">Show Inspector</a>
+    </footer>
+    <script>
+        ONERING.bind('aboutToQuit', function() { ONERING.log("Demo quit.") });
+    </script>
+</body>
+</html>

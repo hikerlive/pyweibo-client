@@ -1,0 +1,84 @@
+﻿<%inherit file="/demo_base.html" />
+<%def name="demo_name()">接口测试</%def>
+
+获取python包装的数据getData<input type='text' id='getDataText'></input>
+<input type='submit' value="提交" id="getData"></input>
+
+<br/>
+获取C扩展模块中的数据getCData<input type='text' id='getCDataText'></input>
+<input type='submit' value="提交" id="getCData"></input>
+
+<br/>
+获取粉丝getFollower<input type='text' id='getFollowerText'></input>
+<input type='submit' value="提交" id="getFollower"></input>
+
+<br/>
+获取关注getFollowing<input type='text' id='getFollowingText'></input>
+<input type='submit' value="提交" id="getFollowing"></input>
+
+<br/>
+获取微博树<input type='submit' value='提交' id="getWeiboByTree"></input>
+
+<br/>
+获取微博消息<input type='text' id='getWeiboByIdText'></input>
+<input type='submit' value='提交' id="getWeiboById"></input>
+
+
+<br/>
+演示用本地浏览器打开网页<input type='submit' value='提交' id="browserUrl"></input>
+
+<br/>
+<button onclick="javascript:ONERING.exit()">Exit Application</button>
+
+<script>
+	$("#getData").click(function(){
+		ONERING.post("/apitest/getdata", function(e){
+			alert("getdata response" + e);
+			$("#getDataText").attr("value", e);
+		});
+	});
+
+	$("#getCData").click(function(){
+		ONERING.post("/apitest/getcdata", function(e){
+			alert("getdata response" + e);
+			$("#getCDataText").attr("value", e);
+		});
+	});
+	$('#getFollower').click(function(){
+		ONERING.post("/apitest/getfollower", {"userid":"hikerlive", "password":"123456"}, function(json){
+			alert("getFollower response: " + json);
+			$("#getFollowerText").attr("value", json);
+		});
+	});
+	$('#getFollowing').click(function(){
+		ONERING.post("/apitest/getfollowing", {"userid":"hikerlive", "password":"123456"}, function(json){
+			alert(json);
+			$("#getFollowingText").attr("value", json);
+		});
+	});
+	$('#getWeiboById').click(function(){
+		ONERING.getJSON('/apitest/getweibobyid', {"msgid":"3407909771514048"}, function(json){
+			alert(json);
+			var a = eval('('+json+')');
+			alert(a.timestamp);
+		}); 
+	});
+	$('#getWeiboByTree').click(function(){
+		ONERING.getJSON('/apitest/getweibobytree', {"cursor_id":"","count":1}, function(json){
+			alert(json);
+		}); 
+	});
+	$('#browserUrl').click(function(){
+		ONERING.getJSON('/browser/url', function(json){
+			var url = json.url;
+			ONERING.post("/browser/launcher", {url:url}, function(resp) {
+			});
+		}); 
+	});
+	
+</script>
+
+<style>
+</style>
+
+## vim:set ft=mako:

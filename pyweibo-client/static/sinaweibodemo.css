@@ -1,0 +1,40 @@
+.project{margin:10px 0 10px 10px;background:url(images/pro_shadow.png) right top no-repeat;}
+.project .user{float:left;width:54px;overflow:hidden;text-align:center;line-height:16px}
+.project .user img{background:#fff;padding:3px;border:1px #dcdcdc solid;display:block;margin-bottom:3px}
+.project .user  a{white-space:nowrap;color:#000}
+
+.clearfix{zoom:1;}
+.clearfix:after{content:'\0020';display:block;clear:both;height:0;}
+
+.mestitle{position:relative;height:20px;color:#666}
+.mestitle .bt{float:left;}
+
+.operate{float:right;visibility:hidden;}
+.operate li{float:left;margin-right:10px;height:17px;overflow:hidden;}
+.operate li a{float:left;background:url(images/msg_toolbar.png) no-repeat;_padding-top:1px;line-height:17px;text-indent:-9999px;width:17px}
+.operate li a:hover{color:#83b311}
+.operate .ico_delete a{background-position:0 -170px}
+.operate .ico_delete a:hover{background-position:0 -187px}
+.operate .ico_reply a{background-position:0 0}
+.operate .ico_reply a:hover{background-position:0 -17px}
+.operate .ico_transmit a{background-position:0 -34px}
+.operate .ico_transmit a:hover{background-position:0 -51px}
+.operate .ico_collect a{background-position:0 -68px}
+.operate .ico_collect a:hover{background-position:0 -85px}
+
+.project .mesbody{margin-left:70px;border:1px #bfbfbf solid;position:relative;margin-right:12px;background:#fff}
+.project .mesbody .arrow{position:absolute;background-position:0 -135px;width:9px;height:18px;left:-9px;top:14px;}
+.project .mesbody .padd{padding:8px 14px}
+
+.bl_f14{font-size:14px;line-height:23px;overflow:hidden;font-family:Microsoft YaHei;word-break:break-all}
+.bl_f14 h1,.bl_f14 h2,.bl_f14 h3,.bl_f14 h4,.bl_f14 h5,.bl_f14 h6{font-size:14px!important;}
+.bl_f14 p{margin-top:5px}
+
+.sourceInfo{margin-top:10px;padding:3px;background:#fff;position:relative;}
+.replyList{margin:10px 15px 0;padding-bottom:4px;}
+.replyItem_t{background:url(images/line102.png) bottom left repeat-x;padding:0 3px 3px 3px;cursor:pointer}
+.replyItem_more{text-indent:19px}
+.replyItem_t .new{background:url(images/ico_new0.png) no-repeat;width:26px;height:13px;display:inline-block;vertical-align:middle}
+.replyItem{background:url(mages/line102.png) bottom left repeat-x;padding:5px 3px;overflow:hidden;zoom:1}
+.replyItems{border-left:4px #e9e9e9 solid;padding-left:6px;margin:5px}
+.replyItem .bl_f14{color:#666;font-size:12px;}
